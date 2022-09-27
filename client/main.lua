@@ -111,7 +111,7 @@ local function PublicGarage(garageName, type)
                     },
                 })
             else
-                exports['okokNotify']:Alert("FAA", "You do not have a pilots license", 5000, 'error')
+                QBCore.Functions.Notify("You do not have a pilots license", "error", 4500)
             end
         end)
     elseif garage.pilotcheck == false or garage.pilotcheck == nil then
@@ -571,7 +571,7 @@ function JobMenuGarage(garageName, vehicleindex)
                 }
                 exports['qb-menu']:openMenu(vehicleMenu)
             else
-                exports['okokNotify']:Alert("FAA", "You do not have a pilots license", 5000, 'error')
+                QBCore.Functions.Notify("You do not have a pilots license", "error", 4500)
             end
         end)
     elseif garage.pilotcheck == false or garage.pilotcheck == nil then
